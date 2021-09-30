@@ -51,8 +51,7 @@
 		0E82BBBE2705C63A00BD6434 = {
 			isa = PBXGroup;
 			children = (
-				0E82BBD12705C64900BD6434 /* Shared */,
-				0E82BBC92705C63A00BD6434 /* macOS */,
+				0E82BBD12705C64900BD6434 /* Weather */,
 				0E82BBC82705C63A00BD6434 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,21 +64,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0E82BBC92705C63A00BD6434 /* macOS */ = {
+		0E82BBC92705C63A00BD6434 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				0E82BBCA2705C63A00BD6434 /* main.swift */,
 			);
-			path = macOS;
+			path = View;
 			sourceTree = "<group>";
 		};
-		0E82BBD12705C64900BD6434 /* Shared */ = {
+		0E82BBD12705C64900BD6434 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				0E82BBC92705C63A00BD6434 /* View */,
 				0E82BBD22705C65000BD6434 /* Model */,
 				0E82BBD32705C65800BD6434 /* ViewModels */,
 			);
-			path = Shared;
+			path = Weather;
 			sourceTree = "<group>";
 		};
 		0E82BBD22705C65000BD6434 /* Model */ = {
@@ -290,7 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C7DL9Y9A7R;
+				DEVELOPMENT_TEAM = Q76P2NAXVF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
