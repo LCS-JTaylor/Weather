@@ -13,5 +13,5 @@ struct WeatherCondition {
     let description: String
     
     // TODO: Add a property that includes an SF Symbols image name that matches the condition
-    
+    let systemImage: String
 }

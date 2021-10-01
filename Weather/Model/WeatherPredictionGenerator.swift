@@ -49,33 +49,33 @@ struct WeatherPredictionGenerator {
     
     // Create an array of possible weather conditions
     static private let weatherConditions: [WeatherCondition] = [
-        WeatherCondition(description: "Sunny/Clear"),
-        WeatherCondition(description: "Partially cloudy"),
-        WeatherCondition(description: "Cloudy"),
-        WeatherCondition(description: "Overcast"),
-        WeatherCondition(description: "Rain"),
-        WeatherCondition(description: "Drizzle"),
-        WeatherCondition(description: "Snow"),
-        WeatherCondition(description: "Stormy"),
-        WeatherCondition(description: "Tornadoes"),
-        WeatherCondition(description: "Thundersnows"),
-        WeatherCondition(description: "Fog"),
-        WeatherCondition(description: "Hurricanes"),
-        WeatherCondition(description: "Sandstorms"),
+        WeatherCondition(description: "Sunny/Clear", systemImage: "sun.min"),
+        WeatherCondition(description: "Partially cloudy", systemImage: "cloud.fill"),
+        WeatherCondition(description: "Cloudy", systemImage: "cloud.fill"),
+        WeatherCondition(description: "Overcast", systemImage: "cloud.fill"),
+        WeatherCondition(description: "Rain", systemImage: "cloud.rain"),
+        WeatherCondition(description: "Drizzle", systemImage: "cloud.drizzle"),
+        WeatherCondition(description: "Snow", systemImage: "cloud.snow"),
+        WeatherCondition(description: "Stormy", systemImage: "cloud.bolt"),
+        WeatherCondition(description: "Tornadoes", systemImage: "tornado"),
+        WeatherCondition(description: "Thundersnows", systemImage: "cloud.sleet"),
+        WeatherCondition(description: "Fog", systemImage: "cloud.fog.fill"),
+        WeatherCondition(description: "Hurricanes", systemImage: "hurricane"),
+        WeatherCondition(description: "Sandstorms", systemImage: "tropicalstorm"),
     ]
     
     // Provides a random weather prediction
     static func getPrediction() -> Prediction {
         
         // Get a possible temperature range
-        let temperatureRange = temperatureRanges.first!
+        let temperatureRange = temperatureRanges.randomElement()!
         
         // Now get an exact temperature from that range
         let temperature = Double.random(in: temperatureRange.bounds)
         let feel = temperatureRange.feel
 
         // Get a weather condition
-        let condition = weatherConditions.first!
+        let condition = weatherConditions.randomElement()!
         
         // Make the prediction
         let prediction = Prediction(temperature: temperature,
