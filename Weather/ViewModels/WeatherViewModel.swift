@@ -25,7 +25,7 @@ class WeatherViewModel {
         let temperatureString = String(currentSession.temperature)
         let conditionString = String(currentSession.condition.description)
         
-        let allString = temperatureString + conditionString + currentSession.feel
+        let allString = "\(temperatureString) \(conditionString) \(currentSession.feel)"
         // Append
         sessions.append(currentSession)
         
