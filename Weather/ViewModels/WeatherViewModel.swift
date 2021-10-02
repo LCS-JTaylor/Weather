@@ -7,25 +7,25 @@
 
 import Foundation
 
-class WeatherViewModel {
+class WeatherViewModel: ObservableObject {
     
     // A list of predictions
-    @Published var sessions: [Prediction] = []
+    @Published var predictions: [Prediction] = []
     
     // Given question, provide weather
     func giveWeatherTo() -> Prediction {
         
         // Start a new session
-        var currentSession: Prediction
+        var currentPrediction: Prediction
         
         // Get prediction
-        currentSession = WeatherPredictionGenerator.getPrediction()
+        currentPrediction = WeatherPredictionGenerator.getPrediction()
         
         // Append
-        sessions.append(currentSession)
+        predictions.append(currentPrediction)
         
         // Return
-        return currentSession
+        return currentPrediction
     }
 }
 

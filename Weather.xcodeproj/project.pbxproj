@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				8F3A08BC2708A2BE004B0066 /* iOS_WeatherApp.swift */,
-				8F3A08BE2708A2BE004B0066 /* ContentView.swift */,
+				8F3A08CD2708A336004B0066 /* Views */,
 				8F3A08C02708A2C0004B0066 /* Assets.xcassets */,
 				8F3A08C22708A2C0004B0066 /* Preview Content */,
 			);
@@ -141,6 +141,14 @@
 				8F3A08C32708A2C0004B0066 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8F3A08CD2708A336004B0066 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F3A08BE2708A2BE004B0066 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
