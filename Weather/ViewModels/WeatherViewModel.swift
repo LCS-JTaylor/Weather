@@ -13,24 +13,19 @@ class WeatherViewModel {
     @Published var sessions: [Prediction] = []
     
     // Given question, provide weather
-    func giveWeatherTo(givenTemperature: Double, givenFeel: String, givenCondition: WeatherCondition) -> String {
+    func giveWeatherTo() -> Prediction {
         
         // Start a new session
-        var currentSession = Prediction(temperature: givenTemperature, feel: givenFeel, condition: givenCondition)
-        currentSession.temperature = givenTemperature
-        currentSession.feel = givenFeel
-        currentSession.condition = givenCondition
+        var currentSession: Prediction
         
-        // Change condition and temperature to strings
-        let temperatureString = String(currentSession.temperature)
-        let conditionString = String(currentSession.condition.description)
+        // Get prediction
+        currentSession = WeatherPredictionGenerator.getPrediction()
         
-        let allString = "\(temperatureString) \(conditionString) \(currentSession.feel)"
         // Append
         sessions.append(currentSession)
         
         // Return
-        return allString
+        return currentSession
     }
 }
 
